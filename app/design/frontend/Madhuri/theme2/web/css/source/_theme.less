@@ -1,0 +1,171 @@
+//
+// Custom Media Breakpoints
+// ----------------------------------------------
+//@screen__xxl: 1600px;
+//@screen__sm: 700px;
+//
+////
+////  Style groups for 'desktop' devices
+////  ---------------------------------------------
+//
+//& when (@media-target = 'desktop'), (@media-target = 'all') {
+//  @media all and (min-width: @screen__xxl),
+//  print {
+//    .media-width('min', @screen__xxl);
+//  }
+//}
+//
+////
+////  Style groups for 'mobile' devices
+////  ---------------------------------------------
+//
+//& when (@media-target = 'mobile'), (@media-target = 'all') {
+//  @media only screen and (max-width: (@screen__sm - 1)) {
+//    .media-width('max', @screen__sm);
+//  }
+//}
+
+
+@color-primary: #2E539F;
+@color-secondary: #DD406F;
+@color-yellow-grey: #F2F0E5;
+@color-grey-1: #aaa;
+@active__color: @color-secondary;
+
+@header-panel__background-color: @color-yellow-grey;
+@navigation-level0-item__color: #fff;
+@_nav-level0-item-color-active: #fff;
+@navigation-desktop-level0-item__color: #fff;
+@navigation-level0-item__active__color: #fff;
+@navigation-level0-item__active__border-color: #fff;
+@navigation-desktop-level0-item__active__border-color: #fff;
+@navigation__background: @color-primary;
+@navigation-desktop__font-weight: @font-weight__heavier;
+@navigation-desktop-level0-item__hover__color: @color-secondary;
+
+//
+//  Buttons variables
+//  _____________________________________________
+
+//
+//  Buttons
+//  ---------------------------------------------
+
+//  Font style
+@button__font-family: @font-family__regular;
+@button__font-weight: @font-weight__heavier;
+@button__padding: 7px 15px; // is set up to false when buttons don't depend on side paddings or have fixed width
+
+//  Primary button
+@button-primary__background: @color-secondary;
+@button-primary__border: 1px solid @color-secondary;
+@button-primary__color: @color-white;
+
+@button-primary__hover__background: darken(@color-secondary, 10%);
+@button-primary__hover__border: 1px solid darken(@color-secondary, 15%);
+
+@button-primary__active__background: @button-primary__hover__background;
+@button-primary__active__border: @button-primary__hover__border;
+@button-primary__active__color: @button-primary__color;
+
+//  Default = secondary button
+@button__color: @primary__color;
+@button__background: @color-white;
+@button__border: 1px solid @color-grey-1;
+
+@button__hover__color: @color-secondary;
+@button__hover__background: @color-white;
+@button__hover__border: 1px solid @color-secondary;
+
+@button__active__color: @button__color;
+@button__active__background: @button__hover__background;
+@button__active__border: @button__border;
+
+
+//  Large button
+@button__font-size__l: @font-size__l;
+@button__line-height__l: @font-size__l + 4;
+@button__padding__l: 10px 30px;
+
+
+//
+//  Links
+//  ---------------------------------------------
+@link__color: @color-primary;
+@link__text-decoration: none;
+
+@link__visited__color: @link__color;
+@link__visited__text-decoration: none;
+
+@link__hover__color: @color-secondary;
+@link__hover__text-decoration: underline;
+
+@link__active__color: @active__color;
+@link__active__text-decoration: underline;
+
+//  Fonts
+@font-family-name__base: 'Roboto';
+@font-family-name__regular: 'Montserrat';
+@font-family__base: @font-family-name__base, @font-family__sans-serif;
+@font-family__condensed: 'Roboto Condensed', 'Helvetica Condensed', 'Arial Narrow', Arial, sans-serif;
+@font-family__regular: 'Montserrat', 'Tahoma', 'Open sans', Arial, sans-serif;
+
+.navigation {
+  font-family: @font-family__regular;
+  .level0 {
+    &.active,
+    &.has-active {
+      > .level-top {
+        color: #fff;
+      }
+    }
+  }
+}
+//
+//  Common
+//  _____________________________________________
+
+// & when (@media-common = true) {
+
+//   .button-container {
+//     //margin-bottom: 20px;
+//     .action, a.action.button {
+//       margin-left: 5px;
+//     }
+//   }
+//   //
+//   // Buttons
+//   // ---------------------------------------------
+//   a.action, button {
+//     text-transform: uppercase;
+//     letter-spacing: .1em;
+//     border-radius: 3px;
+//   }
+
+//   //
+//   // Secondary button
+//   // ---------------------------------------------
+//   a.action.button {
+//     .lib-link-as-button();
+//     .lib-button();
+
+//     background-color: @color-white;
+//     border: 1px solid @color-grey-1;
+//     color: @color-primary;
+//     box-shadow: 3px 3px @color-gray80;
+//   }
+// }
+
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  //
+  // Large button
+  // ---------------------------------------------
+  a.action.large {
+    .lib-button-l();
+  }
+}

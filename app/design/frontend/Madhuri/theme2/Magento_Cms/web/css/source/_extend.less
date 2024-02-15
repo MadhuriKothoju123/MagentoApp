@@ -1,0 +1,526 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .cms-index-index {
+    .columns {
+      .column.main {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .button-container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .modular-row {
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  //
+  //  Newsletter block
+  //  ----------------------------------------
+  .newsletter-block {
+    border-bottom: 3px solid @color-primary;
+
+    .title {
+      font-family: @font-family__regular;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .label {
+      display: none;
+    }
+
+    .newsletter-illustration {
+      text-align: center;
+      max-width: 400px;
+      padding-top: 2em;
+      margin: 0 auto;
+
+      .img {
+        background-size: cover;
+        background-image: url(../images/newsletter.png);
+        width: 260px;
+        height: 120px;
+      }
+    }
+  }
+
+  //
+  //  Contact us block
+  //  ----------------------------------------
+  .contact-block {
+    text-align: center;
+    color: #fff;
+    background-color: @color-primary;
+    padding: 50px 40px;
+
+    .title {
+      margin-top: 0;
+      font-family: @font-family__regular;
+      margin-bottom: 20px;
+      font-size: 2.6rem;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      max-width: 630px;
+      margin: 0 auto;
+    }
+
+    .action.primary {
+      margin-top: 35px;
+      padding: 0.8em 1.3em;
+      font-weight: 400;
+      letter-spacing: .1em;
+      min-width: 16em;
+    }
+  }
+
+  //
+  //  Showcase Hero Banner
+  //  ----------------------------------------
+  .hero.banner {
+    background: @color-primary;
+    background-image: url(../images/showcase-bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    position: relative;
+
+    border-top: 1px solid #82aad5;
+  }
+  .showcase-header {
+    margin: 0 auto;
+    text-align: center;
+
+    .title {
+      font-family: @font-family__regular;
+      text-transform: uppercase;
+      text-shadow: #233e77 2px 2px;
+      color: #fff;
+    }
+
+    .subtitle {
+      color: #fff;
+      font-size: 24px;
+      max-width: 650px;
+      margin: 30px auto;
+    }
+
+    .button-container .primary {
+      border: none;
+      box-shadow: none;
+      background: #fff;
+      min-width: 12em;
+      letter-spacing: .1em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-family: @font-family__regular;
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: inline-block;
+      color: @color-primary;
+      font-weight: 700;
+      padding: 15px 40px;
+      font-size: 18px;
+
+      &:hover {
+        background-color: @color-secondary;
+        color: #fff;
+      }
+    }
+  }
+
+  //
+  // Services Header
+  // ---------------------------------------------
+  .services-page-header {
+    margin-top: -10px;
+    background: #003661;
+    position: relative;
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+
+    .title {
+      font-size: 50px;
+      text-align: center;
+      font-family: @font-family__regular;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-size: 2.2rem;
+      max-width: 650px;
+      margin: 0 auto 30px auto;
+    }
+
+    &:after {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      z-index: 1;
+      opacity: .15;
+      background-image: url(../images/showcase-bg.svg);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 120%;
+    }
+  }
+
+  //
+  // Testimonials Block
+  // ------------------------------------------------------
+  .testimonials {
+    background: #82aad5;
+    text-align: center;
+
+    .items {
+      margin: 0 auto;
+
+      .client {
+        text-transform: uppercase;
+        line-height: 2em;
+        display: block;
+        font-weight: 700;
+      }
+    }
+  }
+
+  //
+  // Magento 2 Extensions
+  // ----------------------------------------------------
+  .extensions-container-block {
+      background: #e6f1f9;
+  }
+
+  .modular-row {
+    .extensions {
+      .extension {
+        margin-bottom: 10px;
+
+        .extension-title {
+
+        }
+
+        .extension-wrapper {
+          background: #fff;
+          box-shadow: 4px 4px 1px rgba(0,0,0,.1);
+
+          .extension-container {
+
+            .ext-price {
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // Ecommerce Blog
+  // -------------------------------
+  .blog-container-block {
+    background: #F2F0E5;
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  //
+  //  Showcase Hero Banner
+  //  ----------------------------------------
+  .after-navigation {
+    margin-top: -25px;
+  }
+
+  .hero.banner {
+    padding: 40px;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    position: relative;
+
+
+    .showcase-header {
+      margin: 0 auto;
+      text-align: center;
+
+      .title {
+        font-size: 45px;
+        max-width: 900px;
+        margin: 20px auto;
+        font-weight: 700;
+        letter-spacing: .11em;
+      }
+    }
+  }
+
+  //
+  // Newsletter
+  // --------------------------------------------
+  .newsletter-block {
+    padding-top: 20px;
+    padding-bottom: 0;
+    padding-left: @layout-indent__width;
+    padding-right: @layout-indent__width;
+
+
+    .newsletter-illustration {
+      text-align: center;
+      max-width: 400px;
+      padding-top: 2em;
+      margin: 0 auto;
+
+      .img {
+        width: 400px;
+        height: 182px;
+      }
+    }
+
+    form {
+      display: table;
+      width: 100%;
+      justify-content: center;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .control {
+      input {
+        height: 40px;
+        display: block;
+        width: 100%;
+        margin: 0;
+        flex-grow: 0;
+
+        border: 1px solid #BFBFBF;
+        box-shadow: 4px 4px 1px rgba(0,0,0,.1);
+        color: #333;
+        font-size: 20px;
+        padding: .5em 1em;
+        transition: all 0.1s;
+      }
+    }
+
+    .actions {
+      display: table-cell;
+      vertical-align: top;
+      width: 1%;
+
+      .primary.action {
+        font-size: 16px;
+        height: 40px;
+        padding: .8em 1.3em;
+        min-width: 12em;
+        letter-spacing: .1em;
+        box-shadow: 3px 3px 3px 0 rgba(0,0,0,.2);
+      }
+    }
+
+    .title, .subtitle {
+      text-align: center;
+    }
+  }
+  .subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+
+  //
+  // Testimonials Block
+  // ------------------------------------------------------
+  .testimonials {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .items {
+      max-width: 900px;
+
+      .client-feedback {
+        margin: 20px 0;
+        font-size: 18px;
+        line-height: 2em;
+      }
+      .client {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 2em;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .modular-row {
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 1200px;
+
+    .title, .subtitle {
+      text-align: center;
+    }
+  }
+
+  //
+  // Services
+  // -----------------------------------------------
+  .modular-row {
+    .services {
+      display: flex;
+      flex-flow: row wrap;
+
+      .service {
+        width: 30%;
+        margin: 0 auto;
+        padding: 0 20px 30px 20px;
+
+        .image {
+          display: block;
+          margin: 0 auto 10px auto;
+          max-width: 240px;
+        }
+
+        .section-header {
+          font-family: @font-family__regular;
+          font-size: 20px;
+          font-weight: 400;
+          letter-spacing: .05em;
+          margin: 0 0 .5em 0;
+          text-align: center;
+          text-transform: uppercase;
+        }
+
+        .service-text {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  //
+  // Magento 2 Extensions
+  // ----------------------------------------------------
+  .modular-row {
+    &.home-extensions .title {
+      margin-bottom: 35px;
+    }
+    .extensions {
+      display: flex;
+      flex-flow: row wrap;
+
+      margin-bottom: 30px;
+
+      .extension {
+        margin: 0 auto;
+        position: relative;
+        width: 23%;
+
+        .extension-title {
+          margin: 10px 10px 0 10px;
+        }
+
+        .extension-wrapper {
+
+          .extension-container {
+            padding: 0 10px;
+            margin: 0;
+            min-height: 63px;
+
+            .ext-price {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // Ecommerce Blog
+  // ---------------------------------
+  .modular-row {
+    .blog-container {
+      display: flex;
+      flex-flow: row wrap;
+
+      .post {
+        margin: 0 auto;
+        position: relative;
+        width: 32%;
+
+        .post-container {
+          padding: 10px;
+
+
+          .image-container {
+            .lib-css(height, 200px);
+            .lib-css(background, #ded9c9);
+            .lib-css(width, 100%);
+            .lib-css(border-radius, 10px);
+
+            .post-category {
+              width: 100%;
+              .lib-css(text-align, right);
+
+              .post-label {
+                position: relative;
+                color: @color-white;
+                top: 20px;
+                letter-spacing: .1em;
+
+                .lib-css(padding, 5px 10px);
+                .lib-css(background,#284a99);
+                .lib-css(display, inline-block);
+                .lib-css(border-top-left-radius, 5px);
+                .lib-css(border-bottom-left-radius, 5px);
+              }
+            }
+          }
+
+          .date-container {
+            font-size: @font-size__s;
+            text-align: right;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .newsletter-block {
+    padding-left: @layout__width-xs-indent;
+    padding-right: @layout__width-xs-indent;
+  }
+
+  //
+  // Magento 2 Extensions
+  // ----------------------------------------------------
+
+  .modular-row {
+    .extensions {
+      padding: 10px;
+    }
+  }
+}

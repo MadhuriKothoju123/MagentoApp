@@ -1,0 +1,39 @@
+<!-- File: app/code/YourVendor/NewArrivals/view/frontend/templates/new_arrivals.phtml -->
+<div class="product-slideshow">
+    <div class="slideshow-container">
+        <h3>New Arrivals </h3>
+    <?php foreach ($block->getNewArrivals() as $product): ?>
+        <div class="slide">
+     
+            <a href="<?= $product->getProductUrl() ?>">
+              <img height="200px" width="200px" src="<?= $block->getRuntimeProductImageUrl($product, 'thumbnail')?>"/> 
+            </a>
+            <div class="product-info">
+                    <h2><?= $block->escapeHtml($product->getName()) ?></h2>
+                    <p><?= $block->getProductPrice($product) ?></p>
+                </div>
+    </div>
+       
+    <?php endforeach; ?>
+</div>
+</div>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var slides = document.querySelectorAll('.slide');
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = 'block';
+        setTimeout(showSlides, 3000); // Change slide every 3 seconds (adjust as needed)
+    }
+</script>
